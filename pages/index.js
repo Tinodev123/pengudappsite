@@ -237,7 +237,7 @@ export default function Home() {
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                   <a
-                    href="https://www.basescan.org/"
+                    href="https://basescan.org/address/0x7758ad796e9d19c93541285489000e3fb8b2c24d"
                     className="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
                   >
                     Contract
