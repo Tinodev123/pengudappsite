@@ -96,7 +96,14 @@
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
-
+.button {
+  background-color: #008CBA;
+  color:#ffffff;
+  display: inline;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 .card p {
   margin: 0;
   font-size: 1.25rem;
@@ -112,6 +119,9 @@
   .grid {
     width: 100%;
     flex-direction: column;
+
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -121,7 +131,7 @@
     border-color: #222;
   }
   .code {
-    background: #111;
+    background: #a15959;
   }
   .logo img {
     filter: invert(1);
