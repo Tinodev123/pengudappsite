@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    loader: "Next.js + Images",
+    loader: "akamai",
     path: "",
   },
   assetPrefix: "./",
