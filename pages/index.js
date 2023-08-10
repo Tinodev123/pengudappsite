@@ -2,13 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
-import background from "../background.jpg";
-import one from "../46.png";
-import two from "../57.png";
-import three from "../133.png";
-import four from "../253.png";
-import banner from "../banner.png";
-import gif from "../pengus.gif";
+import banner from "/img/banner.png";
+import gif from "/img/pengus.gif";
 import { Contract, providers, utils } from "ethers";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
@@ -111,6 +106,7 @@ export default function Home() {
   
   
   return (
+    
     <div>
       
       <nav id="header" className="w-full z-30 top-0 text-white py-1 lg:py-6 bg-black">
@@ -131,9 +127,7 @@ export default function Home() {
           </div>
 
           <div
-            className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
-            id="nav-content"
-          >
+            className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20" id="nav-content">
             
             <ul className="list-reset lg:flex justify-end flex-1 items-center">
               <li className="mr-3">
@@ -148,21 +142,27 @@ export default function Home() {
           </div>
         </div>
       </nav>
+      
+      <div className="container mx-auto h-screen " style={{
+      backgroundImage: `url(${banner.src})`,
+      width: '100%',
+      height: '100%',
+      backgroundRepeat: 'repeat',
 
-      <div className="container mx-auto h-screen ">
-        <div className="flex h-screen justify-center items-center">
+          }}>
+        <div className="flex justify-center items-center">
           <div className=" text-black text-center  ">
           <iframe
-    src="https://embed.ipfscdn.io/ipfs/bafybeihazpt6pkm4azgtupdz7hc2j3o4zpjsvtcgfq4t2keozxkss3ud6q/?contract=0x7758AD796E9d19C93541285489000e3Fb8B2C24d&chain=%7B%22name%22%3A%22Base%22%2C%22chain%22%3A%22ETH%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fbase.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Ether%22%2C%22symbol%22%3A%22ETH%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22base%22%2C%22chainId%22%3A8453%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22base%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmW5Vn15HeRkScMfPcW12ZdZcC2yUASpu6eCsECRdEmjjj%2Fbase-512.png%22%2C%22height%22%3A512%2C%22width%22%3A512%2C%22format%22%3A%22png%22%7D%7D&clientId=b3d9e96913cb595be8c9b32efc5fddcc&primaryColor=blue"
-    width="600px"
-    height="600px"
-    
-    frameborder="0"
-></iframe>
+            src="https://embed.ipfscdn.io/ipfs/bafybeihazpt6pkm4azgtupdz7hc2j3o4zpjsvtcgfq4t2keozxkss3ud6q/?contract=0x7758AD796E9d19C93541285489000e3Fb8B2C24d&chain=%7B%22name%22%3A%22Base%22%2C%22chain%22%3A%22ETH%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fbase.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Ether%22%2C%22symbol%22%3A%22ETH%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22base%22%2C%22chainId%22%3A8453%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22base%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmW5Vn15HeRkScMfPcW12ZdZcC2yUASpu6eCsECRdEmjjj%2Fbase-512.png%22%2C%22height%22%3A512%2C%22width%22%3A512%2C%22format%22%3A%22png%22%7D%7D&clientId=b3d9e96913cb595be8c9b32efc5fddcc&primaryColor=blue"
+            width="600"
+            height="600"
+            
+            frameborder="0"
+          ></iframe>
           </div>
         </div>
       </div>
-
+      v
       <section className="bg-gray-100 border-b py-8">
       
         <div className="container max-w-5xl mx-auto m-8">
@@ -255,7 +255,9 @@ export default function Home() {
             </div>
           </div>
       </section>
+      
           </div>
+         
   );
   
 }
